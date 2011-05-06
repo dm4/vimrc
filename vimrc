@@ -54,10 +54,6 @@ nmap <C-Tab>  :tabnext<CR>
 " Encoding
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
 
-"runtimepath
-"set runtimepath+=~/.vim/acp
-"set runtimepath+=~/.vim/snipMate
-
 " Detect filetype
 filetype on
 filetype indent on
