@@ -114,7 +114,7 @@ if has("autocmd")
 endif
 
 " for eclim
-let g:EclimProjectTreeAutoOpen=1
+"let g:EclimProjectTreeAutoOpen=1
 
 " for Rainbow
 let g:hlrainbow="{[("
