@@ -99,6 +99,9 @@ if has("gui")
 	map <D-C> :ProjectCreate 
 	map <D-E> :ProjectTree<CR>
 	map <D-D> :ProjectDelete 
+    " window size
+    set lines=30
+    set columns=80
 endif
 
 " Save last postion
