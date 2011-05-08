@@ -116,5 +116,5 @@ endif
 "let g:EclimProjectTreeAutoOpen=1
 
 " for Rainbow
-let g:hlrainbow="{[("
-au BufNewFile,BufReadPost *.c,*.cpp,*.C,*.m,*.mm,*.h,*.hpp  Rainbow
+"let g:hlrainbow="{[("
+"autocmd BufNewFile,BufReadPost *.c,*.cpp,*.C,*.m,*.mm,*.h,*.hpp  Rainbow
