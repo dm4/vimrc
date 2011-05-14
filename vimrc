@@ -33,6 +33,9 @@ set nocompatible
 set fdm=indent
 autocmd BufRead * exe "folddoc foldopen"
 
+" set filetype
+autocmd BufReadPost,BufNewFile *.tt set filetype=html
+
 "
 nmap ; :
 vmap ; :
