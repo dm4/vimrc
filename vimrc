@@ -62,6 +62,9 @@ filetype on
 filetype indent on
 filetype plugin on
 
+" for fakeclip
+vmap <Leader>v "+y
+
 " color setting
 if ($TERM == "xterm-color") || has("gui_macvim")
     " set 256 colors
