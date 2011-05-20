@@ -15,6 +15,7 @@ set softtabstop=4
 set autoindent
 set smartindent
 "set cindent
+set ignorecase
 
 " backup info
 set backup
@@ -27,6 +28,7 @@ endif
 set wrap
 set linebreak
 set showbreak=>>\ 
+
 "
 set nu
 syntax on
@@ -35,9 +37,16 @@ set mouse=a
 set bs=2
 set nocompatible
 
+" mininum split window size
+set winminheight=0
+set winminwidth=0
+
+" auto reload vimrc
+autocmd! BufWritePost .vimrc source ~/.vimrc
+
 " set foldmethod
 set fdm=indent
-autocmd BufRead * exe "folddoc foldopen"
+autocmd BufReadPost * exe "normal zR"
 
 " set filetype
 autocmd BufReadPost,BufNewFile *.tt set filetype=html
@@ -57,10 +66,11 @@ imap <C-b>      <LEFT>
 nmap <Leader>n  :NERDTreeToggle<CR>
 nmap <Leader>b  :e ++enc=big5<CR>
 nmap <Leader>u  :e ++enc=utf-8<CR>
+nmap <Leader>p  :set paste!<CR>
 " for fakeclip
-vmap <Leader>v "+y
+vmap <Leader>v  "+y
 " ctrl-tab only works on gui
-nmap <C-Tab>  gt
+nmap <C-Tab>    gt
 
 " Encoding
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
