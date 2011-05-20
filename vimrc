@@ -71,7 +71,7 @@ filetype indent on
 filetype plugin on
 
 " color setting
-if ($TERM == "xterm-color") || has("gui_macvim")
+if $TERM == "xterm-color"
     " set 256 colors
     set t_Co=256
     if filereadable($HOME."/.vim/colors/yzlin256.vim")
@@ -79,7 +79,7 @@ if ($TERM == "xterm-color") || has("gui_macvim")
     endif
     hi CursorLine       term=none cterm=none ctermbg=234
     set cursorline
-elseif ($TERM == "xterm")
+elseif $TERM == "xterm"
     set t_Co=16
 endif
 
