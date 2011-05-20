@@ -77,8 +77,8 @@ if $TERM == "xterm-color"
     if filereadable($HOME."/.vim/colors/yzlin256.vim")
         colors yzlin256
     endif
-    hi CursorLine       term=none cterm=none ctermbg=234
     set cursorline
+    hi CursorLine       term=none cterm=none ctermbg=234
 elseif $TERM == "xterm"
     set t_Co=16
 endif
