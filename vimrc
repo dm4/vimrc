@@ -20,8 +20,11 @@ set smartindent
 set backup
 set backupdir=$HOME/.vim/backup/
 
+" set line break
+set wrap
+set linebreak
+set showbreak=>>\ 
 "
-set nowrap
 set nu
 syntax on
 set ruler
