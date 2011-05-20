@@ -83,6 +83,19 @@ elseif $TERM == "xterm"
     set t_Co=16
 endif
 
+" set status line
+set laststatus=2
+set statusline=%{&paste?'[p]':''}
+set statusline=%m%f
+set statusline+=%=
+set statusline+=[%{&encoding}]
+set statusline+=\ \ 
+set statusline+=[%{&ft!=''?&ft:'none'}]
+set statusline+=\ \ 
+set statusline+=Col\ %c,\ Line\ %l/%L
+set statusline+=\ \ 
+set statusline+=%p%%
+
 " Save last postion
 if has("autocmd")
    autocmd BufReadPost *
