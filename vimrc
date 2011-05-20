@@ -39,23 +39,25 @@ autocmd BufRead * exe "folddoc foldopen"
 " set filetype
 autocmd BufReadPost,BufNewFile *.tt set filetype=html
 
-"
+" key mapping
 nmap ; :
 vmap ; :
-imap <C-D>  <DEL>
-nmap <F7>   :w<CR>:!perl %<CR>
-nmap <M-L>  :set nu!<CR>
-nmap <C-L>  :set nu!<CR>
-nmap <C-n>  :tabnext<CR>
-nmap <C-p>  :tabp<cr>
-imap <C-a>  <HOME>
-imap <C-e>  <END>
-map <Leader>N   :NERDTreeToggle<CR>
-imap <C-f>  <RIGHT>
-imap <C-b>  <LEFT>
-nmap <Leader>b :e ++enc=big5<CR>
-"ctrl-tab only works on gui
-nmap <C-Tab>  :tabnext<CR>
+imap <C-D>      <DEL>
+nmap <F7>       :w<CR>:!perl %<CR>
+nmap <C-L>      :set nu!<CR>
+nmap <C-n>      gt
+nmap <C-p>      gT
+imap <C-a>      <HOME>
+imap <C-e>      <END>
+imap <C-f>      <RIGHT>
+imap <C-b>      <LEFT>
+nmap <Leader>n  :NERDTreeToggle<CR>
+nmap <Leader>b  :e ++enc=big5<CR>
+nmap <Leader>u  :e ++enc=utf-8<CR>
+" for fakeclip
+vmap <Leader>v "+y
+" ctrl-tab only works on gui
+nmap <C-Tab>  gt
 
 " Encoding
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
@@ -64,9 +66,6 @@ set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
 filetype on
 filetype indent on
 filetype plugin on
-
-" for fakeclip
-vmap <Leader>v "+y
 
 " color setting
 if ($TERM == "xterm-color") || has("gui_macvim")
