@@ -99,7 +99,7 @@ if has("gui_running")
         hi MatchParen   gui=NONE      guifg=#404040   guibg=#8fff8b
     endif
 else
-    " hi Normal           cterm=NONE      ctermfg=231     ctermbg=232
+    hi Normal           cterm=NONE      ctermfg=231     ctermbg=232
 
     hi IncSearch        cterm=BOLD      ctermfg=232     ctermbg=215
     hi Search           cterm=NONE      ctermfg=232     ctermbg=215
@@ -152,8 +152,6 @@ else
     hi Type             cterm=NONE      ctermfg=207     ctermbg=NONE
     hi Underlined       cterm=BOLD      ctermfg=227     ctermbg=NONE
     hi TaglistTagName   cterm=BOLD      ctermfg=63      ctermbg=NONE
-    " add by dm4
-    hi CursorLine       term=none cterm=none ctermbg=234
 
     if v:version >= 700
         hi Pmenu        cterm=NONE      ctermfg=253     ctermbg=242
