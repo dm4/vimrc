@@ -10,3 +10,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/simple-commenter/plugin"]
+	path = bundle/simple-commenter/plugin
+	url = git://github.com/c9s/simple-commenter.vim.git
