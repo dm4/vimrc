@@ -19,6 +19,9 @@ set smartindent
 " backup info
 set backup
 set backupdir=$HOME/.vim/backup/
+if exists("*mkdir") && !isdirectory($HOME."/.vim/backup")
+    call mkdir($HOME."/.vim/backup")
+endif
 
 " set line break
 set wrap
