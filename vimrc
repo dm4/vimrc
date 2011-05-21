@@ -42,7 +42,7 @@ set winminheight=0
 set winminwidth=0
 
 " auto reload vimrc
-autocmd! BufWritePost .vimrc source ~/.vimrc
+autocmd! BufWritePost *vimrc source %
 
 " set foldmethod
 set fdm=indent
