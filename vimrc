@@ -99,6 +99,8 @@ set laststatus=2
 set statusline=%{&paste?'[p]':''}
 set statusline=%m%f
 set statusline+=%=
+set statusline+=(%{mode()})
+set statusline+=\ \ 
 set statusline+=[%{&encoding}]
 set statusline+=\ \ 
 set statusline+=[%{&ft!=''?&ft:'none'}]
