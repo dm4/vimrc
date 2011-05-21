@@ -1,8 +1,12 @@
 " set colors
 if filereadable($HOME."/.vim/colors/yzlin256.vim")
     colors yzlin256
+     hi StatusLine   guibg=gray20
+     hi LineNr       guifg=gray40    guibg=gray10
+     hi Folded       guibg=gray30
 endif
-hi CursorLine guibg=gray15
+set cursorline
+hi CursorLine   guibg=gray15
 
 " window size
 set lines=30
