@@ -96,8 +96,8 @@ endif
 
 " set status line
 set laststatus=2
-set statusline=%{&paste?'[p]':''}
-set statusline=%m%f
+set statusline=%{(&paste)?'[p]':''}
+set statusline+=%m%f
 set statusline+=%=
 set statusline+=(%{mode()})
 set statusline+=\ \ 
