@@ -71,6 +71,8 @@ nmap <Leader>p  :set paste!<CR>
 vmap <Leader>v  "+y
 " ctrl-tab only works on gui
 nmap <C-Tab>    gt
+" auto indent
+nmap <C-i>      gg=G``
 
 " Encoding
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
