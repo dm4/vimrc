@@ -52,6 +52,7 @@ autocmd BufReadPost * exe "normal zR"
 autocmd BufReadPost,BufNewFile *.tt set filetype=html
 
 " key mapping
+let mapleader=","
 nmap ; :
 vmap ; :
 imap <C-D>      <DEL>
