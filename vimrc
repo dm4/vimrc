@@ -86,12 +86,8 @@ filetype plugin on
 if $TERM == "xterm-color"
     " set 256 colors
     set t_Co=256
-    if filereadable($HOME."/.vim/colors/yzlin256.vim")
-        colors yzlin256
-        hi Normal   ctermfg=gray
-    endif
+    colors dm4
     set cursorline
-    hi CursorLine   term=none   cterm=none  ctermbg=234
 elseif $TERM == "xterm"
     set t_Co=16
 endif
