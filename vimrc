@@ -73,6 +73,17 @@ vmap <Leader>v  "+y
 nmap <C-Tab>    gt
 " auto indent
 nmap <C-i>      gg=G``
+" hexHighlight plugin
+nmap <Leader>h :call HexHighlight()<CR>
+" Show syntax highlighting groups for word under cursor
+nmap <C-C> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 
 " Encoding
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
