@@ -68,6 +68,7 @@ nmap <Leader>n  :NERDTreeToggle<CR>
 nmap <Leader>b  :e ++enc=big5<CR>
 nmap <Leader>u  :e ++enc=utf-8<CR>
 nmap <Leader>p  :set paste!<CR>
+nmap <Leader>w  :set wrap!<CR>
 " for fakeclip
 vmap <Leader>v  "+y
 " ctrl-tab only works on gui
