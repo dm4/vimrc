@@ -31,7 +31,7 @@ endif
 " set line break
 set wrap
 set linebreak
-set showbreak=>>\ 
+"set showbreak=>>\ 
 
 "
 set nu
