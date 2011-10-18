@@ -153,13 +153,6 @@ if has("autocmd")
       \ endif
 endif
 
-" for eclim
-"let g:EclimProjectTreeAutoOpen=1
-
-" for Rainbow
-"let g:hlrainbow="{[("
-"autocmd BufNewFile,BufReadPost *.c,*.cpp,*.C,*.m,*.mm,*.h,*.hpp  Rainbow
-
 if has("gui_running")
     " set colors
     colors dm4
