@@ -54,6 +54,7 @@ autocmd BufReadPost * exe "normal zR"
 
 " set filetype
 autocmd BufReadPost,BufNewFile *.tt set filetype=html
+autocmd BufReadPost,BufNewFile httpd*.conf set filetype=apache
 
 " key mapping
 let mapleader=","
