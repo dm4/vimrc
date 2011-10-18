@@ -7,15 +7,19 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" About tab and indent
+" indent
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 set autoindent
 set smartindent
 "set cindent
 set ignorecase
+
+" tab and space
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+"autocmd BufReadPost,BufNewFile *.rb set sw=2 ts=2 softtabstop=2
+autocmd BufReadPost,BufNewFile *.html set sw=2 ts=2 softtabstop=2
 
 " backup info
 set backup
