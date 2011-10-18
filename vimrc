@@ -123,6 +123,28 @@ set statusline+=Col\ %c,\ Line\ %l/%L
 set statusline+=\ \ 
 set statusline+=%p%%
 
+" prevent scratch window from omni complete
+set completeopt=menu,longest
+
+" NERDTree
+let NERDTreeQuitOnOpen=1
+
+" simplecommenter
+let g:oneline_comment_padding = ''
+
+" mojo
+let mojo_highlight_data = 1
+let mojo_disable_html = 1
+
+" vimim
+let g:vimim_custom_label=1
+let g:vimim_enter_for_seamless=0
+
+" zencoding
+let g:user_zen_settings = {
+\  'indentation' : '    '
+\}
+
 " Save last postion
 if has("autocmd")
    autocmd BufReadPost *
