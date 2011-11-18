@@ -4,9 +4,11 @@
 [submodule "bundle/fakeclip"]
 	path = bundle/fakeclip
 	url = git://github.com/kana/vim-fakeclip.git
+    ignore = untracked
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+    ignore = untracked
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
