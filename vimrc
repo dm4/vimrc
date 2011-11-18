@@ -75,12 +75,13 @@ nmap <Leader>u  :e ++enc=utf-8<CR>
 nmap <Leader>p  :set paste!<CR>
 nmap <Leader>r  :set wrap!<CR>
 nmap <Leader>ev :tabnew $MYVIMRC<CR>
+nmap <Leader>h  :set hls!<CR>
 " for fakeclip
 vmap <Leader>v  "+y
 " ctrl-tab only works on gui
 nmap <C-Tab>    gt
 " hexHighlight plugin
-nmap <Leader>h :call HexHighlight()<CR>
+nmap <Leader>l :call HexHighlight()<CR>
 " Show syntax highlighting groups for word under cursor
 nmap <C-C> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
