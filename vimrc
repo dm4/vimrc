@@ -69,6 +69,8 @@ imap <C-a>      <HOME>
 imap <C-e>      <END>
 imap <C-f>      <RIGHT>
 imap <C-b>      <LEFT>
+nmap <C-J>      ddp
+nmap <C-K>      ddkP
 nmap <Leader>n  :NERDTreeToggle<CR>
 nmap <Leader>b  :e ++enc=big5<CR>
 nmap <Leader>u  :e ++enc=utf-8<CR>
