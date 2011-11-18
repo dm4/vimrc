@@ -85,7 +85,8 @@ hi SpellRare    gui=undercurl guisp=#cc66cc
 hi SpellLocal   gui=undercurl guisp=#cccc66
 hi SpellCap     gui=undercurl guisp=#66cccc
 
-hi MatchParen   gui=NONE      guifg=#404040 ctermfg=238 guibg=#8fff8b ctermbg=120
+"hi MatchParen   gui=NONE      guifg=#404040 ctermfg=238 guibg=#8fff8b ctermbg=120
+hi MatchParen   gui=NONE      guifg=#ffff00 ctermfg=yellow guibg=#000000 ctermbg=0
 
 " For mojo
 hi link MojoFileContainer perlDATA
