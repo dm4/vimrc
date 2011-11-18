@@ -29,7 +29,7 @@ if exists("*mkdir") && !isdirectory($HOME."/.vim/backup")
 endif
 
 " set line break
-set wrap
+set nowrap
 set linebreak
 "set showbreak=>>\ 
 
