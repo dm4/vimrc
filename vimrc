@@ -100,7 +100,7 @@ filetype indent on
 filetype plugin on
 
 " color setting
-if $TERM == "xterm-color"
+if $TERM == "xterm-256color" || $TERM == "screen-256color"
     " set 256 colors
     set t_Co=256
     colors dm4
