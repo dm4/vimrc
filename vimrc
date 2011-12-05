@@ -124,7 +124,7 @@ set statusline+=[%{&ft!=''?&ft:'none'}]
 set statusline+=\ \ 
 set statusline+=Col\ %c,\ Line\ %l/%L
 set statusline+=\ \ 
-set statusline+=%p%%
+set statusline+=%p%%\ 
 
 " prevent scratch window from omni complete
 set completeopt=menu,longest
@@ -140,8 +140,8 @@ let mojo_highlight_data = 1
 let mojo_disable_html = 1
 
 " vimim
-let g:vimim_custom_label=1
-let g:vimim_enter_for_seamless=0
+let g:vimim_cloud = -1
+let g:vimim_custom_color = -1
 
 " zencoding
 let g:user_zen_settings = {
