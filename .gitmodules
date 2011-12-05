@@ -24,3 +24,6 @@
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = http://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/gist-vim"]
+	path = bundle/gist-vim
+	url = https://github.com/mattn/gist-vim.git
