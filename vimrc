@@ -148,6 +148,9 @@ let g:user_zen_settings = {
 \  'indentation' : '    '
 \}
 
+" vim-powerline
+let g:Powerline_symbols = 'fancy'
+
 " Save last postion
 if has("autocmd")
    autocmd BufReadPost *
