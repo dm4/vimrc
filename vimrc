@@ -40,6 +40,7 @@ set ruler
 set mouse=a
 set bs=2
 set nocompatible
+set showcmd
 
 " mininum split window size
 set winminheight=0
