@@ -4372,7 +4372,9 @@ function! s:vimim_start()
     sil!call s:vimim_label_on()
     sil!call s:vimim_helper_mapping_on()
     set noruler
-    highlight! link Cursor CursorIM
+    " comment by dm4
+    " avoid cursor disappear in macvim
+"    highlight! link Cursor CursorIM
 endfunction
 
 function! g:vimim_stop()
