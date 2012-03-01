@@ -13,6 +13,7 @@ set autoindent
 set smartindent
 "set cindent
 set ignorecase
+set hls
 
 " tab and space
 set shiftwidth=4
@@ -27,6 +28,10 @@ set backupdir=$HOME/.vim/backup/
 if exists("*mkdir") && !isdirectory($HOME."/.vim/backup")
     call mkdir($HOME."/.vim/backup")
 endif
+
+" undo
+set undodir=~/.vim/undo/
+set undofile
 
 " set line break
 set nowrap
