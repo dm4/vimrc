@@ -66,6 +66,8 @@ autocmd BufReadPost,BufNewFile httpd*.conf set filetype=apache
 let mapleader=","
 nmap ; :
 vmap ; :
+nmap j gj
+nmap k gk
 imap <C-D>      <DEL>
 nmap <F7>       :w<CR>:!perl %<CR>
 nmap <C-L>      :set nu!<CR>
@@ -133,7 +135,10 @@ set statusline+=\ \
 set statusline+=%p%%\ 
 
 " prevent scratch window from omni complete
-set completeopt=menu,longest
+set completeopt=menu,menuone,longest,preview
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+set previewheight=2
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
@@ -168,14 +173,25 @@ if has("autocmd")
       \ endif
 endif
 
+" Show diff when git commit
+autocmd FileType gitcommit DiffGitCached
+
+" Highlight trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 if has("gui_running")
     " set colors
     colors dm4
     set cursorline
 
     " window size
-    set lines=30
-    set columns=80
+    set lines=100
+    set columns=90
 
     " hide tool bar
     set guioptions+=c
@@ -191,8 +207,8 @@ if has("gui_running")
     set imdisable
     set antialias
 
+    set guifont=Monaco:h17
     if has("gui_macvim")
-        set guifont=Monaco:h15
         " set CMD+ENTER fullscreen
         set fuopt=maxhorz,maxvert
         " for eclim <cmd + shift + L>
