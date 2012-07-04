@@ -11,7 +11,7 @@ call pathogen#helptags()
 set expandtab
 set autoindent
 set smartindent
-"set cindent
+set cindent
 set ignorecase
 set hls
 
@@ -19,8 +19,6 @@ set hls
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-"autocmd BufReadPost,BufNewFile *.rb set sw=2 ts=2 softtabstop=2
-autocmd BufReadPost,BufNewFile *.html set sw=2 ts=2 softtabstop=2
 
 " backup info
 set backup
@@ -46,6 +44,7 @@ set mouse=a
 set bs=2
 set nocompatible
 set showcmd
+set clipboard=unnamed
 
 " mininum split window size
 set winminheight=0
@@ -54,13 +53,36 @@ set winminwidth=0
 " auto reload vimrc
 autocmd! BufWritePost *vimrc source %
 
-" set foldmethod
-set fdm=indent
-autocmd BufReadPost * exe "normal zR"
-
 " set filetype
 autocmd BufReadPost,BufNewFile *.tt set filetype=html
 autocmd BufReadPost,BufNewFile httpd*.conf set filetype=apache
+
+" set indent
+"autocmd BufReadPost,BufNewFile *.rb set sw=2 ts=2 softtabstop=2
+"autocmd BufReadPost,BufNewFile *.html set sw=2 ts=2 softtabstop=2
+
+" Show diff when git commit
+autocmd FileType gitcommit DiffGitCached
+
+" Highlight trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" for taglist
+"autocmd BufWritePost *.cpp silent exe "!exctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
+"autocmd BufWritePost *.h silent exe "!exctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
+
+" Save last postion
+if has("autocmd")
+   autocmd BufReadPost *
+      \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+      \   exe "normal g'\"" |
+      \ endif
+endif
 
 " key mapping
 let mapleader=","
@@ -80,18 +102,24 @@ imap <C-b>      <LEFT>
 nmap <C-J>      ddp
 nmap <C-K>      ddkP
 nmap <Leader>n  :NERDTreeToggle<CR>
+nmap <Leader>g  :GundoToggle<CR>
 nmap <Leader>b  :e ++enc=big5<CR>
 nmap <Leader>u  :e ++enc=utf-8<CR>
 nmap <Leader>p  :set paste!<CR>
 nmap <Leader>r  :set wrap!<CR>
 nmap <Leader>ev :tabnew $MYVIMRC<CR>
 nmap <Leader>h  :set hls!<CR>
+nmap <Leader>s  :w<CR>:source %<CR>
+
 " for fakeclip
 vmap <Leader>v  "+y
+
 " ctrl-tab only works on gui
 nmap <C-Tab>    gt
+
 " hexHighlight plugin
 nmap <Leader>l :call HexHighlight()<CR>
+
 " Show syntax highlighting groups for word under cursor
 nmap <C-C> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -126,7 +154,7 @@ set statusline+=%m%f
 set statusline+=%=
 set statusline+=(%{mode()})
 set statusline+=\ \ 
-set statusline+=[%{&encoding}]
+set statusline+=[%{&fenc}]
 set statusline+=\ \ 
 set statusline+=[%{&ft!=''?&ft:'none'}]
 set statusline+=\ \ 
@@ -141,14 +169,10 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 set previewheight=2
 
 " NERDTree
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 
 " simplecommenter
 let g:oneline_comment_padding = ''
-
-" mojo
-let mojo_highlight_data = 1
-let mojo_disable_html = 1
 
 " vimim
 let g:vimim_cloud = -1
@@ -159,35 +183,20 @@ let g:user_zen_settings = {
 \  'indentation' : '    '
 \}
 
-" gist-vim
-let g:gist_clip_command = 'pbcopy'
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
+" clang_complete
+let g:clang_snippets = 1
+let g:clang_complete_copen = 0
+let g:clang_snippets_engine = 'snipmate'
 
+" vjde for android
+let g:vjde_lib_path = '/usr/local/Cellar/android-sdk/r18/platforms/android-15/android.jar'
 
-" Save last postion
-if has("autocmd")
-   autocmd BufReadPost *
-      \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-      \   exe "normal g'\"" |
-      \ endif
-endif
-
-" Show diff when git commit
-autocmd FileType gitcommit DiffGitCached
-
-" Highlight trailing spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
 
 if has("gui_running")
     " set colors
     colors dm4
     set cursorline
+    set guifont=Monaco:h17
 
     " window size
     set lines=100
@@ -207,7 +216,6 @@ if has("gui_running")
     set imdisable
     set antialias
 
-    set guifont=Monaco:h17
     if has("gui_macvim")
         " set CMD+ENTER fullscreen
         set fuopt=maxhorz,maxvert
