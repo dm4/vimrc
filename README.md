@@ -6,4 +6,8 @@ Installation
     $ ln -s ~/.vim/vimrc ~/.vimrc
     $ ln -s ~/.vim/vimrc ~/.gvimrc
 
+Then, in `vim`
+
+    :BundleInstall!
+
 Have fun :)
