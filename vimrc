@@ -3,9 +3,21 @@
 "               "
 """""""""""""""""
 
-" pathogen.vim
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" vundle settings
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" bundles
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/nerdtree'
+Bundle 'msanders/snipmate.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'sjl/gundo.vim'
+Bundle 'simplecommenter'
+Bundle 'AutoComplPop'
+Bundle 'hexHighlight.vim'
 
 " indent
 set expandtab
@@ -28,15 +40,18 @@ if exists("*mkdir") && !isdirectory($HOME."/.vim/backup")
 endif
 
 " undo
-set undodir=~/.vim/undo/
 set undofile
+set undodir=~/.vim/undo/
+if exists("*mkdir") && !isdirectory($HOME."/.vim/undo")
+    call mkdir($HOME."/.vim/undo")
+endif
 
 " set line break
 set nowrap
 set linebreak
 "set showbreak=>>\ 
 
-"
+" other settings
 set nu
 syntax on
 set ruler
