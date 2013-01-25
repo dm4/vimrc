@@ -106,6 +106,8 @@ nmap ; :
 vmap ; :
 nmap j gj
 nmap k gk
+vmap j gj
+vmap k gk
 imap <C-D>      <DEL>
 nmap <F7>       :w<CR>:!perl %<CR>
 nmap <C-L>      :set nu!<CR>
@@ -115,8 +117,8 @@ imap <C-a>      <HOME>
 imap <C-e>      <END>
 imap <C-f>      <RIGHT>
 imap <C-b>      <LEFT>
-nmap <C-J>      ddp
-nmap <C-K>      ddkP
+nmap <C-J>      ddp==
+nmap <C-K>      ddkP==
 nmap <Leader>n  :NERDTreeToggle<CR>
 nmap <Leader>g  :GundoToggle<CR>
 nmap <Leader>b  :e ++enc=big5<CR>
