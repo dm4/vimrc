@@ -211,12 +211,12 @@ let g:clang_snippets_engine = 'snipmate'
 " vjde for android
 let g:vjde_lib_path = '/usr/local/Cellar/android-sdk/r18/platforms/android-15/android.jar'
 
-
 if has("gui_running")
     " set colors
     colors dm4
     set cursorline
-    set guifont=Monaco:h17
+"    set guifont=Monaco:h17
+    set guifont=Source\ Code\ Pro\ Light:h16
 
     " window size
     set lines=100
@@ -239,10 +239,5 @@ if has("gui_running")
     if has("gui_macvim")
         " set CMD+ENTER fullscreen
         set fuopt=maxhorz,maxvert
-        " for eclim <cmd + shift + L>
-        "map <D-L> :ProjectList<CR>
-        "map <D-C> :ProjectCreate
-        "map <D-E> :ProjectTree<CR>
-        "map <D-D> :ProjectDelete
     endif
 endif
