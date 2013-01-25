@@ -20,6 +20,9 @@ Bundle 'simplecommenter'
 Bundle 'AutoComplPop'
 Bundle 'hexHighlight.vim'
 
+" vundle settings
+filetype indent plugin on
+
 " indent
 set expandtab
 set autoindent
@@ -147,11 +150,6 @@ endfunc
 
 " Encoding
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
-
-" Detect filetype
-filetype on
-filetype indent on
-filetype plugin on
 
 " color setting
 if $TERM == "xterm-256color" || $TERM == "screen-256color"
