@@ -44,8 +44,8 @@ hi FoldColumn     gui=NONE   guifg=#8b8bcd ctermfg=104   guibg=#2e2e2e ctermbg=2
 
 hi Directory      gui=NONE   guifg=#0099ff ctermfg=33    guibg=NONE
 hi LineNr         gui=NONE   guifg=#666666 ctermfg=241   guibg=#141414 ctermbg=233
-hi NonText        gui=BOLD   guifg=#8b8bcd ctermfg=104   guibg=NONE
-hi SpecialKey     gui=BOLD   guifg=#ab60ed ctermfg=135   guibg=NONE
+hi NonText        gui=BOLD   guifg=#333333 ctermfg=238   guibg=NONE
+hi SpecialKey     gui=BOLD   guifg=#333333 ctermfg=238   guibg=NONE
 hi Title          gui=BOLD   guifg=#bf4f4b ctermfg=131   guibg=NONE
 hi Visual         gui=NONE   guifg=#eeeeee ctermfg=7     guibg=#5555dd ctermbg=62
 
