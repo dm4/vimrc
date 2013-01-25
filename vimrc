@@ -87,13 +87,6 @@ autocmd BufReadPost,BufNewFile httpd*.conf set filetype=apache
 " Show diff when git commit
 autocmd FileType gitcommit DiffGitCached
 
-" Highlight trailing spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
 
 " for taglist
 "autocmd BufWritePost *.cpp silent exe "!exctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
@@ -165,6 +158,14 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color"
 elseif $TERM == "xterm"
     set t_Co=16
 endif
+
+" Highlight trailing spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " set status line
 set laststatus=2
