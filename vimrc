@@ -65,6 +65,10 @@ set nocompatible
 set showcmd
 set clipboard=unnamed
 
+" invisible character
+set nolist
+set listchars=tab:▸\ ,trail:▝,eol:¬
+
 " mininum split window size
 set winminheight=0
 set winminwidth=0
@@ -129,6 +133,7 @@ nmap <Leader>r  :set wrap!<CR>
 nmap <Leader>ev :tabnew $MYVIMRC<CR>
 nmap <Leader>h  :set hls!<CR>
 nmap <Leader>s  :w<CR>:source %<CR>
+nmap <Leader>i  :set list!<CR>
 
 " for fakeclip
 vmap <Leader>v  "+y
