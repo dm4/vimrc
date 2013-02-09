@@ -59,7 +59,7 @@ set linebreak
 set nu
 syntax on
 set ruler
-set mouse=a
+"set mouse=a
 set bs=2
 set nocompatible
 set showcmd
@@ -184,14 +184,11 @@ set statusline+=Col\ %c,\ Line\ %l/%L
 set statusline+=\ \ 
 set statusline+=%p%%\ 
 
-" prevent scratch window from omni complete
-set completeopt=menu,menuone,longest,preview
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-set previewheight=2
+" remove preview window from omni complete
+set completeopt-=preview
 
 " NERDTree
-let NERDTreeQuitOnOpen=0
+let NERDTreeQuitOnOpen=1
 
 " simplecommenter
 let g:oneline_comment_padding = ''
