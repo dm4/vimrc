@@ -39,7 +39,7 @@ hi lCursor        gui=NONE   guifg=#404040 ctermfg=238   guibg=#8fff8b ctermbg=1
 hi CursorIM       gui=NONE   guifg=#404040 ctermfg=238   guibg=#8b8bff ctermbg=105
 hi CursorLine     gui=NONE                               guibg=#151515 ctermbg=234 cterm=NONE
 
-hi Folded         gui=NONE   guifg=#cfcfcd ctermfg=252   guibg=#8888dd ctermbg=104
+hi Folded         gui=NONE   guifg=#cfcfcd ctermfg=252   guibg=#8888dd ctermbg=234
 hi FoldColumn     gui=NONE   guifg=#8b8bcd ctermfg=104   guibg=#2e2e2e ctermbg=236
 
 hi Directory      gui=NONE   guifg=#0099ff ctermfg=33    guibg=NONE
