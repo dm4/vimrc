@@ -19,6 +19,9 @@ Bundle 'sjl/gundo.vim'
 Bundle 'simplecommenter'
 Bundle 'AutoComplPop'
 Bundle 'hexHighlight.vim'
+Bundle 'dm4/vim-writer'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'mattn/emmet-vim'
 
 " vundle settings
 filetype indent plugin on
