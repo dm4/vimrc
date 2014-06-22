@@ -123,7 +123,7 @@ imap <C-f>      <RIGHT>
 imap <C-b>      <LEFT>
 nmap <C-J>      ddp==
 nmap <C-K>      ddkP==
-nmap <Leader>n  :NERDTreeToggle<CR>
+nmap <Leader>n  <plug>NERDTreeTabsToggle<CR>
 nmap <Leader>g  :GundoToggle<CR>
 nmap <Leader>b  :e ++enc=big5<CR>
 nmap <Leader>u  :e ++enc=utf-8<CR>
@@ -192,7 +192,7 @@ set statusline+=%p%%\
 set completeopt-=preview
 
 " NERDTree
-let NERDTreeQuitOnOpen=1
+let g:nerdtree_tabs_open_on_gui_startup = 0
 
 " simplecommenter
 let g:oneline_comment_padding = ''
