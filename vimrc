@@ -67,6 +67,7 @@ set bs=2
 set nocompatible
 set showcmd
 set clipboard=unnamed
+set foldmethod=marker
 
 " invisible character
 set nolist
