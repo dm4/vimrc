@@ -83,6 +83,7 @@ autocmd! BufWritePost *vimrc source %
 " set filetype
 autocmd BufReadPost,BufNewFile *.tt set filetype=html
 autocmd BufReadPost,BufNewFile httpd*.conf set filetype=apache
+autocmd BufReadPost,BufNewFile *.md set filetype=markdown
 
 " set indent
 autocmd BufReadPost,BufNewFile *.rb set sw=2 ts=2 softtabstop=2
