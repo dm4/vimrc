@@ -245,5 +245,6 @@ if has("gui_running")
     if has("gui_macvim")
         " set CMD+ENTER fullscreen
         set fuopt=maxhorz,maxvert
+"        set fullscreen
     endif
 endif
