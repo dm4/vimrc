@@ -22,6 +22,7 @@ Bundle 'hexHighlight.vim'
 Bundle 'dm4/vim-writer'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mattn/emmet-vim'
+Bundle 'junegunn/vim-easy-align'
 
 " vundle settings
 filetype indent plugin on
