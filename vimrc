@@ -23,6 +23,7 @@ Bundle 'dm4/vim-writer'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mattn/emmet-vim'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'altercation/vim-colors-solarized'
 
 " vundle settings
 filetype indent plugin on
@@ -162,11 +163,14 @@ set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
 if $TERM == "xterm-256color" || $TERM == "screen-256color"
     " set 256 colors
     set t_Co=256
-    colors dm4
-    set cursorline
 elseif $TERM == "xterm"
     set t_Co=16
 endif
+
+" theme setting
+set cursorline
+set background=dark
+colorscheme solarized
 
 " Highlight trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -219,10 +223,10 @@ let g:vjde_lib_path = '/usr/local/Cellar/android-sdk/r18/platforms/android-15/an
 
 if has("gui_running")
     " set colors
-    colors dm4
-    set cursorline
+    set background=light
+    colorscheme solarized
 "    set guifont=Monaco:h17
-    set guifont=Source\ Code\ Pro\ Light:h16
+    set guifont=Source\ Code\ Pro:h18
 
     " window size
     set lines=100
