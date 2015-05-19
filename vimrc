@@ -3,6 +3,9 @@
 "               "
 """""""""""""""""
 
+" my listchars is utf-8
+scriptencoding utf-8
+
 " vundle settings
 filetype off
 set rtp+=~/.vim/bundle/vundle/
