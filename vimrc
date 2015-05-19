@@ -173,7 +173,7 @@ endif
 " theme setting
 set cursorline
 set background=dark
-colorscheme solarized
+silent! colorscheme solarize
 
 " Highlight trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -227,7 +227,7 @@ let g:vjde_lib_path = '/usr/local/Cellar/android-sdk/r18/platforms/android-15/an
 if has("gui_running")
     " set colors
     set background=light
-    colorscheme solarized
+    silent! colorscheme solarize
 "    set guifont=Monaco:h17
     set guifont=Source\ Code\ Pro:h18
 
