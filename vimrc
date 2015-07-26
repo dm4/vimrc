@@ -27,6 +27,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mattn/emmet-vim'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'fatih/vim-go'
 
 " vundle settings
 filetype indent plugin on
@@ -103,6 +104,12 @@ autocmd FileType gitcommit DiffGitCached
 "autocmd BufWritePost *.cpp silent exe "!exctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
 "autocmd BufWritePost *.h silent exe "!exctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
 
+" for vim-go
+autocmd FileType go nmap <Leader>gdv <Plug>(go-doc-vertical)
+autocmd FileType go nmap <Leader>gdt <Plug>(go-doc-tab)
+autocmd FileType go nmap <leader>gr <Plug>(go-run)
+autocmd FileType go nmap <Leader>gi <Plug>(go-implements)
+
 " Save last postion
 if has("autocmd")
    autocmd BufReadPost *
@@ -131,7 +138,7 @@ imap <C-b>      <LEFT>
 nmap <C-J>      ddp==
 nmap <C-K>      ddkP==
 nmap <Leader>n  <plug>NERDTreeTabsToggle<CR>
-nmap <Leader>g  :GundoToggle<CR>
+nmap <Leader>gun :GundoToggle<CR>
 nmap <Leader>b  :e ++enc=big5<CR>
 nmap <Leader>u  :e ++enc=utf-8<CR>
 nmap <Leader>p  :set paste!<CR>
