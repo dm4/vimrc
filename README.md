@@ -8,6 +8,6 @@ Installation
 
 Then, in `vim`
 
-    :BundleInstall!
+    :PluginInstall!
 
 Have fun :)
