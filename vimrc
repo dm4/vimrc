@@ -13,7 +13,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " bundles
-Plugin 'dm4/vim-boshiamy'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
