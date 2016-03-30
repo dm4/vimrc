@@ -29,6 +29,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
 
 " vundle settings
 filetype indent plugin on
@@ -96,6 +97,8 @@ autocmd BufReadPost,BufNewFile *.md set filetype=markdown
 autocmd BufReadPost,BufNewFile *.rb set sw=2 ts=2 softtabstop=2
 autocmd BufReadPost,BufNewFile *.erb set sw=2 ts=2 softtabstop=2
 "autocmd BufReadPost,BufNewFile *.html set sw=2 ts=2 softtabstop=2
+autocmd FileType javascript set sw=2 ts=2 softtabstop=2
+autocmd FileType json set sw=2 ts=2 softtabstop=2
 
 " Show diff when git commit
 autocmd FileType gitcommit DiffGitCached
