@@ -7,10 +7,11 @@
 scriptencoding utf-8
 
 " vundle settings
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+Bundle 'VundleVim/Vundle.vim'
 
 " bundles
 Plugin 'Lokaltog/vim-easymotion'
@@ -31,6 +32,7 @@ Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 
 " vundle settings
+call vundle#end()
 filetype indent plugin on
 
 " indent
@@ -71,7 +73,6 @@ syntax on
 set ruler
 "set mouse=a
 set bs=2
-set nocompatible
 set showcmd
 set clipboard=unnamed
 set foldmethod=marker
