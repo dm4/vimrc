@@ -103,11 +103,6 @@ autocmd FileType json set sw=2 ts=2 softtabstop=2
 " Show diff when git commit
 autocmd FileType gitcommit DiffGitCached
 
-
-" for taglist
-"autocmd BufWritePost *.cpp silent exe "!exctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
-"autocmd BufWritePost *.h silent exe "!exctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
-
 " for vim-go
 autocmd FileType go nmap <Leader>gdv <Plug>(go-doc-vertical)
 autocmd FileType go nmap <Leader>gdt <Plug>(go-doc-tab)
@@ -131,7 +126,6 @@ nmap k gk
 vmap j gj
 vmap k gk
 imap <C-D>      <DEL>
-nmap <F7>       :w<CR>:!perl %<CR>
 nmap <C-L>      :set nu!<CR>
 nmap <C-n>      gt
 nmap <C-p>      gT
@@ -151,9 +145,6 @@ nmap <Leader>ev :tabnew $MYVIMRC<CR>
 nmap <Leader>h  :set hls!<CR>
 nmap <Leader>s  :w<CR>:source %<CR>
 nmap <Leader>i  :set list!<CR>
-
-" for fakeclip
-vmap <Leader>v  "+y
 
 " ctrl-tab only works on gui
 nmap <C-Tab>    gt
@@ -209,31 +200,11 @@ set statusline+=Col\ %c,\ Line\ %l/%L
 set statusline+=\ \ 
 set statusline+=%p%%\ 
 
-" remove preview window from omni complete
-set completeopt-=preview
-
 " NERDTree
 let g:nerdtree_tabs_open_on_gui_startup = 0
 
 " simplecommenter
 let g:oneline_comment_padding = ''
-
-" vimim
-let g:vimim_cloud = -1
-let g:vimim_custom_color = -1
-
-" zencoding
-let g:user_zen_settings = {
-\  'indentation' : '    '
-\}
-
-" clang_complete
-let g:clang_snippets = 1
-let g:clang_complete_copen = 0
-let g:clang_snippets_engine = 'snipmate'
-
-" vjde for android
-let g:vjde_lib_path = '/usr/local/Cellar/android-sdk/r18/platforms/android-15/android.jar'
 
 if has("gui_running")
     " set colors
