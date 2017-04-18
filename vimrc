@@ -67,7 +67,6 @@ set ruler
 "set mouse=a
 set bs=2
 set showcmd
-set clipboard=unnamed
 set foldmethod=marker
 
 " invisible character
