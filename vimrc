@@ -6,34 +6,27 @@
 " my listchars is utf-8
 scriptencoding utf-8
 
-" vundle settings
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
-" bundles
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
-Plugin 'msanders/snipmate.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-endwise'
-Plugin 'sjl/gundo.vim'
-Plugin 'simplecommenter'
-Plugin 'AutoComplPop'
-Plugin 'hexHighlight.vim'
-Plugin 'dm4/vim-writer'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'mattn/emmet-vim'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'fatih/vim-go'
-Plugin 'pangloss/vim-javascript'
-
-" vundle settings
-call vundle#end()
-filetype indent plugin on
+call plug#begin()
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+Plug 'msanders/snipmate.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'sjl/gundo.vim'
+Plug 'simplecommenter'
+Plug 'AutoComplPop'
+Plug 'hexHighlight.vim'
+Plug 'dm4/vim-writer'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'mattn/emmet-vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'altercation/vim-colors-solarized'
+Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
+Plug 'elzr/vim-json'
+Plug 'kchmck/vim-coffee-script'
+Plug 'Valloric/YouCompleteMe'
+call plug#end()
 
 " indent
 set expandtab
